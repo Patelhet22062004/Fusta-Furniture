@@ -1,0 +1,94 @@
+.main {
+  @apply flex flex-col justify-between w-full items-center relative my-[5%];
+
+  & > .productWrapper {
+    @apply flex flex-col gap-2 w-full items-center px-4;
+
+    & > .productImage {
+      @apply aspect-square w-full relative rounded-lg overflow-hidden;
+      transition: 0.5s ease-in-out;
+
+      & > .infoWrapper {
+        @apply flex flex-col gap-2 justify-center z-10 absolute top-[5%] left-[5%];
+
+        & > span {
+          @apply justify-center bg-slate-50 px-1;
+        }
+      }
+    }
+
+    & > .content {
+      @apply flex flex-col items-center;
+
+      & > .productName {
+        @apply text-2xl font-light line-clamp-1;
+      }
+      & > .productPrice {
+        @apply font-light;
+      }
+    }
+  }
+
+  & > .btnWrapper {
+    @apply opacity-0 scale-0 justify-center absolute top-[45%] grid grid-flow-row;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+.main:hover .productImage {
+  @apply -translate-y-[5%] brightness-50;
+}
+
+.main:hover .btnWrapper {
+  @apply opacity-100 -translate-y-full scale-100 z-20;
+}
+
+/* .main {
+  @apply flex flex-col justify-between w-full items-center relative my-[10%];
+
+  & > .productWrapper {
+    @apply flex flex-col gap-2 w-full items-center px-4;
+
+    & > .productImage {
+      @apply aspect-square w-full relative rounded-lg overflow-hidden;
+      transition: 0.3s ease-in-out;
+    }
+
+    & > .content {
+      @apply flex flex-col items-center;
+
+      & > .productName {
+        @apply text-caption1 font-semibold line-clamp-1;
+      }
+      & > .productPrice {
+        @apply font-bold;
+      }
+    }
+  }
+
+  & > .btnWrapper {
+    @apply opacity-0;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 100%;
+  bottom: 0;
+  transition: 0.3s ease-in-out;
+  @apply bg-green rounded-lg;
+}
+.main:hover::before {
+  height: 65%;
+  z-index: -1;
+}
+.main:hover .productImage {
+  @apply -translate-y-[10%];
+}
+
+.main:hover .btnWrapper {
+  @apply opacity-100 translate-y-1/2;
+} */

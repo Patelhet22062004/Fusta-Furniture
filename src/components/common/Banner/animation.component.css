@@ -1,0 +1,58 @@
+#lineText {
+  max-width: 100%;
+  height: auto;
+  transition: opacity 2s ease-in-out;
+}
+
+/* .line1 {
+  display: flex;
+
+  color: black;
+} */
+
+.lineUp1 {
+  animation: 2s anim-lineUp ease-out;
+
+  transition: opacity 3s ease-in-out, transform 9s ease-in-out;
+}
+.lineUp2 {
+  animation: 2s anim-lineUp1 ease-out;
+
+  transition: opacity 3s ease-in-out, transform 9s ease-in-out;
+}
+
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateX(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes anim-lineUp1 {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
