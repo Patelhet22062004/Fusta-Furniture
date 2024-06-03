@@ -1,0 +1,88 @@
+.gridSection {
+  @apply grid lg:grid-cols-[50%_1fr] grid-cols-1 gap-4 items-center select-none min-h-[40vw] md:px-28 relative;
+  & > .contentWrapper {
+    @apply flex flex-col gap-4;
+
+    & > .content {
+      @apply flex flex-col max-lg:text-center;
+
+      & > .heading {
+        @apply font-bold;
+      }
+      & > .description {
+        @apply text-opacity-70 text-caption1;
+      }
+    }
+    & > .bannerButtons {
+      @apply flex gap-4 max-lg:justify-center;
+    }
+  }
+  & > .backgroundBannerImage {
+    @apply relative aspect-square max-lg:hidden;
+
+    &::after {
+      content: url("/icons/dots-light.svg");
+      position: absolute;
+
+      @apply aspect-square w-[30%] top-5 right-5;
+    }
+  }
+}
+
+.btnIcon {
+  @apply w-6 aspect-square;
+}
+
+/* .swiper-button {
+  display: flex;
+  position: absolute;
+  top: calc(50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.swiper-button svg {
+  width: 3rem;
+  height: 3rem;
+}
+.image-swiper-button-prev {
+  left: 16px;
+}
+.image-swiper-button-next {
+  right: 16px;
+}
+.swiper-button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+} */
+
+/* .gridSection {
+  @apply grid md:grid-cols-[40%_1fr] bg-green grid-cols-1 gap-4 items-center select-none min-h-[20vw];
+  & > .contentWrapper {
+    @apply flex flex-col gap-4;
+
+    & > .content {
+      @apply flex flex-col;
+
+      & > .heading {
+        @apply text-white  font-bold;
+      }
+      & > .description {
+        @apply text-white text-opacity-70 text-caption1;
+      }
+    }
+    & > .bannerButtons {
+      @apply flex gap-4;
+    }
+  }
+  & > .backgroundBannerImage {
+    @apply relative w-full aspect-[16/9];
+
+    &::after {
+      content: url("/icons/dots-light.svg");
+      position: absolute;
+
+      @apply aspect-square w-[30%] top-5 right-5;
+    }
+  }
+} */
